@@ -148,4 +148,3 @@ const newGameBtn = () => {
         iterator.disabled = false;
     }
 };
-//TODO: bug on new games

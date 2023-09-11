@@ -53,7 +53,6 @@ export const drawLimbs = (side) => {
     c.stroke();
 };
 export const dead = () => {
-    // drawHead("black");
     drawHangBoard("red");
     c.beginPath();
     c.arc(400, 190, 41, 0, Math.PI * 2, false);
