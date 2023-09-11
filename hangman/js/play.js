@@ -14,7 +14,7 @@ let category = getRandomIntInclusive(0, 9),
     countCorrect = 0,
     CorrectGuessedChar = new Array(word.length),
     newGameFlag = false;
-
+console.log(word);
 document.querySelector("#startGame").addEventListener("click", () => {
     // choose word from category and start game
     if (newGameFlag) {
@@ -65,16 +65,25 @@ for (const iterator of document.querySelectorAll("#buttons button")) {
             }
             countMistake++;
         }
-        if (countCorrect == word.length && endgame()) {
+        if (countCorrect == myLength(word) && endgame()) {
             setTimeout(() => {
                 newGameBtn();
                 wordToUnderLine(word);
-            }, 5000);
+            }, 3000);
         } else if (countMistake == 8) {
             gameOver();
-        } //game over
+        }
     });
 }
+
+const myLength = (word) => {
+    let count = 0;
+    for (const iterator of word) {
+        if (iterator === " " || iterator == "-") {
+        } else count++;
+    }
+    return count;
+};
 
 const letterInWord = (char, word) => {
     // search index in the word return arr of indexes or -1

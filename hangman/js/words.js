@@ -109,7 +109,7 @@ export const arrofWords = [
         "abraham-lincoln",
         "cleopatra",
         "albert-einstein",
-        "marie curie",
+        "marie-curie",
         "nelson-mandela",
         "leonardo-da-vinci",
         "martin-luther-king-jr",
