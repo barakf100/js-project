@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.lose {
+    color: red;
+}
+#score {
+    position: absolute;
+    font-size: 3vw;
+    width: 20vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background-color: #000;
+    border-left: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+button {
+    position: relative;
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 2rem;
+    bottom: 0;
+}
+
+li {
+    color: #fff;
+}
+
+ol {
+    color: #fff;
+    font-size: 2vw;
+    font-weight: bold;
+}
+div button {
+    cursor: pointer;
+    font-size: 2vw;
+}

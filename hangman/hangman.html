@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        canvas {
+            background-color: #000;
+            height: 100vh;
+            width: 50vw;
+        }
+
+        #game {
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #buttons {
+            text-align: center;
+        }
+
+        #wordAsUnderLine {
+            font-size: 4rem;
+        }
+
+        button {
+            background: none;
+            border: 0;
+            color: #fff;
+            font-size: 3rem;
+            margin: 5px;
+        }
+
+        #startGame,
+        #category {
+            font-size: 4vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <canvas></canvas>
+        <div id="game">
+            <div id="wordAsUnderLine">hangMan</div>
+            <div id="category">category</div>
+            <button id="startGame">start</button>
+            <div id="buttons">
+                <button id="1">q</button>
+                <button id="2">w</button>
+                <button id="3">e</button>
+                <button id="4">r</button>
+                <button id="5">t</button>
+                <button id="6">y</button>
+                <button id="7">u</button>
+                <button id="8">i</button>
+                <button id="9">o</button>
+                <button id="10">p</button><br>
+                <button id="11">a</button>
+                <button id="12">s</button>
+                <button id="13">d</button>
+                <button id="14">f</button>
+                <button id="15">g</button>
+                <button id="16">h</button>
+                <button id="17">j</button>
+                <button id="18">k</button>
+                <button id="19">l</button><br>
+                <button id="20">z</button>
+                <button id="21">x</button>
+                <button id="22">c</button>
+                <button id="23">v</button>
+                <button id="24">b</button>
+                <button id="25">n</button>
+                <button id="26">m</button>
+            </div>
+        </div>
+
+    </div>
+    <script type="module" src="./js/play.js"></script>
+</body>
+
+</html>

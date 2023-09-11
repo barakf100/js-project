@@ -1,0 +1,198 @@
+body {
+    background-image: url("../assets/table.jpg");
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+#p1,
+#p2,
+#game {
+    height: calc(100vh / 3);
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    height: calc(100vh / 3);
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    border-radius: 10%;
+    background-image: url("../assets/cardBack.jpg");
+}
+
+.card .left {
+    font-size: 2rem;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.card .right {
+    font-size: 2rem;
+    align-self: flex-end;
+    margin-right: 10px;
+    margin: 0 10px 10px 0;
+    transform: rotate(180deg);
+}
+
+.card .leftType {
+    margin-left: 9px;
+    font-size: 0.8rem;
+}
+
+.card .rightType {
+    transform: rotate(180deg);
+    margin-right: 5px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    padding-top: 0px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+.card span {
+    font-size: 5rem;
+    align-self: center;
+}
+
+#game {
+    display: flex;
+    justify-content: space-around;
+}
+
+#game .card {
+    border: 0;
+    display: none;
+}
+
+#p1 #winsp1,
+#p2 #winsp2 {
+    background-image: none;
+    transform: rotate(90deg);
+}
+
+#p2 #winsp2 {
+    order: -1;
+}
+
+#p1Put,
+#p2Put {
+    display: flex;
+}
+
+.winDiv {
+    width: 30vw;
+    height: 30vh;
+    border: 1px solid #000;
+    position: absolute;
+    z-index: 50;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 2.5rem;
+    flex-direction: column;
+}
+
+.newGameBtn {
+    width: 7vw;
+    height: 7vh;
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+#p1 .card,
+#p2 .card {
+    align-self: center;
+    color: #fff;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+#winsp1 img,
+#winsp2 img {
+    height: 30vh;
+}
+
+@media (max-width: 1300px) {
+    body {
+        background-image: url("../assets/table.jpg");
+    }
+    .card {
+        height: 28vh;
+        width: 13vw;
+    }
+    #game span {
+        font-size: 3rem;
+    }
+    #game span img {
+        height: 10vh;
+    }
+    #winsp1 {
+        margin-left: 150px;
+    }
+    #winsp2 {
+        margin-right: 150px;
+    }
+    #p1 img,
+    #p2 img {
+        height: 28vh;
+        width: 13vw;
+    }
+}
+@media (max-width: 990px) {
+    .card {
+        height: 26vh;
+        width: 15vw;
+    }
+    #game span {
+        font-size: 2.8rem;
+    }
+    #game span img {
+        height: 9vh;
+    }
+    #winsp1 {
+        margin-left: 250px;
+    }
+    #winsp2 {
+        margin-right: 250px;
+    }
+    #p1 img,
+    #p2 img {
+        height: 24vh;
+        width: 15vw;
+    }
+    .newGameBtn {
+        font-size: initial;
+    }
+}
+@media (max-width: 770px) {
+    .card {
+        height: 22vh;
+        width: 15vw;
+    }
+    #game span {
+        font-size: 2rem;
+    }
+    #game span img {
+        height: 6vh;
+    }
+    #winsp1 {
+        margin-left: 250px;
+    }
+    #winsp2 {
+        margin-right: 250px;
+    }
+    #p1 img,
+    #p2 img {
+        height: 24vh;
+        width: 15vw;
+    }
+    .newGameBtn {
+        width: 15vw;
+    }
+}
