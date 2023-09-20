@@ -13,7 +13,5 @@ document.querySelector("#p2 .card").addEventListener("click", () => {
     card.giveCss(p2, "p2Put");
     player.pcPlay(p1);
     player.smallWin(p1, p2);
-    p1.cardsInHend = 0;
-    p1.cardsOnSide = 0;
     player.checkwin(p1, p2);
 });
