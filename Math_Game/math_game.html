@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Courgette&family=Tilt+Prism&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/Math_game.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="chooseNumbers">
+            <label for="num1">number 1: </label>
+            <input id="num1" onfocus="this.value=''" type="text">
+            <label for="num2">number 2: </label>
+            <input id="num2" onfocus="this.value=''" type="text">
+            <button id="send">new exercise</button>
+            <button id="resetLog">&emsp;reset log</button>
+        </div>
+        <div id="game">
+            <label for="answer">choose number first!</label>
+            <input id="answer" onfocus="this.value=''" type="text">
+            <button id="submit">&emsp;send</button>
+        </div>
+        <div id="logs">
+            <div>
+                <ul class="log0"></ul>
+                <ul class="log1"></ul>
+                <ul class="log2"></ul>
+                <ul class="log3"></ul>
+                <ul class="log4"></ul>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/math_game.js"></script>
+</body>
+
+</html>

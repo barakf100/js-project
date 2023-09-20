@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../assets/pic/squrePaper.jpeg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+    position: absolute;
+    top: 5.5vh;
+    left: 3.4vw;
+    right: 3.4vw;
+    height: 95vh;
+    font-family: "Courgette", cursive;
+}
+
+label {
+    font-size: 3vw;
+}
+
+input {
+    font-size: 3vw;
+    border: 0;
+    background-color: transparent;
+    width: 8vw;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+div {
+    height: calc(100vh / 3);
+}
+
+#send,
+#submit,
+#resetLog {
+    background-color: transparent;
+    border: 0;
+    font-size: 3vw;
+}
+
+#send {
+    box-shadow: inset;
+}
+
+#logs {
+    margin-left: 10px;
+}
+
+#logs h1 {
+    text-align: center;
+}
+
+#logs div {
+    width: 100vw;
+    display: flex;
+}
+
+ul {
+    width: calc(1260px / 5);
+}
+
+#logs li {
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+@media (max-width: 600px) {
+    #chooseNumbers,
+    #game {
+        text-align: center;
+    }
+    #game label,
+    #game input,
+    #game button {
+        font-size: 3rem;
+    }
+    label,
+    input {
+        font-size: 2rem;
+    }
+    #send,
+    #submit,
+    #resetLog {
+        font-size: 2rem;
+    }
+    #logs li {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 450px) {
+    input {
+        width: 18vw;
+    }
+    #logs li {
+        font-size: 0.6rem;
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(64, 172, 64);
+            display: flex;
+            height: 90vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 60vw;
+            height: 75vh;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #boxUp {
+            width: 60vw;
+            display: flex;
+        }
+
+        #cardDeck {
+            border: 1px solid #000;
+            width: 15vw;
+            height: 18vh;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #deckFaceDown,
+        #cardOpen,
+        #diamond {
+            border: 1px solid #000;
+            height: 18vh;
+            width: 6vw;
+        }
+
+        #diamond,
+        #heart,
+        #spades,
+        #clubs {
+            border: 1px solid #000;
+            height: 18vh;
+            width: 6vw;
+            text-align: center;
+            line-height: 18vh;
+        }
+
+        #aces {
+            width: 50vw;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #boxGame {
+            width: 60vw;
+            height: 57h;
+            border: 1px solid #fff;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #card1,
+        #card2,
+        #card3,
+        #card4,
+        #card5,
+        #card6,
+        #card7 {
+            border: 1px solid #000;
+            width: 6vw;
+            height: 55vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="boxUp">
+            <div id="cardDeck">
+                <div id="deckFaceDown">face down</div>
+                <div id="cardOpen">face up</div>
+            </div>
+            <div id="aces">
+                <div id="diamond">♦️</div>
+                <div id="heart">♥️</div>
+                <div id="spades">♠️</div>
+                <div id="clubs">♣️</div>
+            </div>
+        </div>
+        <div id="boxGame">
+            <div id="card1">1</div>
+            <div id="card2">2</div>
+            <div id="card3">3</div>
+            <div id="card4">4</div>
+            <div id="card5">5</div>
+            <div id="card6">6</div>
+            <div id="card7">7</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+#enterListName {
+    display: none;
+}
+#enterListName div button {
+    background-color: transparent;
+    border: 0;
+    margin: 5px;
+    color: black;
+}
+#listName {
+    color: #484444;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+#newList {
+    color: #484444;
+}
