@@ -96,7 +96,7 @@ document.querySelector("#save").addEventListener("click", () => {
     for (let i = 0; i < list.item.length; i++) {
         list.addAmount(amounts[i].innerHTML, i);
     }
-    list.saveList();
+    list.saveList(); // add list before
     // adds name to the nav bar
     addNewListToMenu(list.name);
 });

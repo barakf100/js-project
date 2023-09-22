@@ -17,13 +17,20 @@ export class ShopList {
         if (index != -1) this.item.splice(index, 1);
     }
     nametheList(name) {
-        document.querySelector("#oneListName").innerHTML = `${name}'s list`;
+        if (name.startsWith("list")) {
+            document.querySelector("#oneListName").innerHTML = `${
+                name.split(".")[1]
+            }'s list`;
+        } else
+            document.querySelector("#oneListName").innerHTML = `${name}'s list`;
     }
     addAmount(amount, index) {
         this.item[index][1] = amount;
     }
     saveList() {
-        localStorage.setItem(this.name, this.item);
+        if (this.name.startsWith("list")) {
+            localStorage.setItem(this.name, this.item);
+        } else localStorage.setItem(`list.${this.name}`, this.item); //add list before name
     }
 }
 /* create new line in the shop list with :
@@ -78,6 +85,9 @@ const dropDown = (ul) => {
 
 // adds the saved list to the menu
 export const addNewListToMenu = (name) => {
+    if (name.startsWith("list")) {
+        name = name.split(".")[1];
+    } else return;
     let menu = document.querySelector(".menu-items"),
         li = document.createElement("li"),
         a = document.createElement("a");
@@ -90,13 +100,14 @@ export const addNewListToMenu = (name) => {
 
 // extract list from local storage back to the page
 export const extractFromLocalstorage = (name) => {
+    name = `list.${name}`;
     let json = localStorage.getItem(name),
         jsonArr;
     document.querySelector("#noListImg").style.display = "none";
     document.querySelector("#noListYet").style.display = "none";
     document.querySelector("#theList").display = "block";
     document.querySelector("#list").style.display = "block";
-    document.querySelector("#oneListName").innerHTML = `${name}'s list`;
+    // document.querySelector("#oneListName").innerHTML = `${name}'s list`;
     jsonArr = json.split(",");
     document.querySelector("#theList").innerHTML = ""; //clear
     for (let index = 0; index < jsonArr.length; index += 2) {
@@ -107,6 +118,7 @@ export const extractFromLocalstorage = (name) => {
     }
     putNumbersIsList(jsonArr); //function
     list.name = name;
+    list.nametheList(list.name);
     document.querySelector(".checkbox").click();
 };
 
