@@ -32,7 +32,6 @@ window.addEventListener("load", () => {
 });
 document.querySelector("#lvl").addEventListener("click", (e) => {
     // let lvl = document.querySelectorAll("#lvl button");
-    console.log(e.target);
     clearTimeout(t);
     switch (e.target.innerHTML) {
         case "1":
