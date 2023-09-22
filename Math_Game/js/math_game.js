@@ -4,7 +4,6 @@ window.addEventListener("load", () => {
     document.querySelector("#submit").disabled = true; //disable sec button
     let ex,
         nameCounter = localStorage.length;
-    console.log(nameCounter);
     if (nameCounter) {
         setTimeout(() => {
             initalLogs();
@@ -127,7 +126,6 @@ window.addEventListener("load", () => {
     const myAppend = (store, color, order) => {
         let li = document.createElement("li"),
             log = document.querySelector(`.log${parseInt(order / 10)}`);
-        console.log(nameCounter);
         li.innerHTML = store;
         li.style.color = color;
         log.appendChild(li);
@@ -135,7 +133,8 @@ window.addEventListener("load", () => {
     const getItems = () => {
         let exArr = [];
         for (let i = 0; i < localStorage.length; i++) {
-            exArr = [...exArr, localStorage.getItem(`name_${i}`)];
+            if (localStorage.getItem(`name_${i}`))
+                exArr = [...exArr, localStorage.getItem(`name_${i}`)];
         }
         return exArr;
     };
@@ -157,7 +156,3 @@ window.addEventListener("load", () => {
         return arr;
     };
 });
-/*TODO:
-        - local storage + logs-
-    - every 10 in logs start new ul on right
-    */

@@ -14,7 +14,6 @@ let category = getRandomIntInclusive(0, 9),
     countCorrect = 0,
     CorrectGuessedChar = new Array(word.length),
     newGameFlag = false;
-console.log(word);
 document.querySelector("#startGame").addEventListener("click", () => {
     // choose word from category and start game
     if (newGameFlag) {

@@ -23,6 +23,7 @@ document.querySelector("#cencel").addEventListener("click", () => {
 document.querySelector("#create").addEventListener("click", () => {
     let listName = document.querySelector("#listName").value;
     list.name = listName;
+    list.nametheList(list.name);
     document.querySelector("#enterListName").style.display = "none";
     document.querySelector("#newList").style.display = "block";
     document.querySelector("#listName").value = null;
