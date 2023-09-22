@@ -5,7 +5,7 @@ let nameLocalStorageKeys = localStorage.length + 1;
 
 export const setScore = () => {
     //set score to local storage
-    localStorage.setItem(nameLocalStorageKeys++, sn.score);
+    localStorage.setItem(`snake.${nameLocalStorageKeys++}`, sn.score);
 };
 
 document.querySelector("#newGame").addEventListener("click", () => {
@@ -20,7 +20,10 @@ export const handleLocalStorage = () => {
         counter;
     // takes score from local storage
     for (let index = 0; index < localStorage.length; index++) {
-        previousScores[index] = +localStorage.getItem(localStorage.key(index));
+        if (localStorage.key(index).startsWith("snake"))
+            previousScores[index] = +localStorage.getItem(
+                localStorage.key(index)
+            );
     }
     // sort scores
     previousScores.sort((a, b) => {
